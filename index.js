@@ -30,13 +30,13 @@ function reverseCharacters(varToReverse) {
   
  let reversedStr = varToReverse.split("").reverse().join("");
   return reversedStr;
-}else if (typeof varToReverse === 'number') {
+} else if (typeof varToReverse === 'number') {
   let numAsString = String(varToReverse);
   numAsString = numAsString.split("").reverse().join("");
   numAsString = Number(numAsString);
   return numAsString;
 }
-
+}
 
 console.log(reverseCharacters(6789));
 
@@ -49,8 +49,22 @@ console.log(reverseCharacters(6789));
 //f) Be sure to print the results from each test case in order to verify your code.
 
 
+function revMyArr(theArray) {
+let myArr = []
+for (let i = 0; i < theArray.length; i++) {
+ let reverseVal = reverseCharacters(theArray[i]);
+ myArr.push(reverseVal);
+  }
 
-//let arrayTest1 = ['apple', 'potato', 'Capitalized Words'];
-//let arrayTest2 = [123, 8897, 42, 1168, 8675309];
-//let arrayTest3 = ['hello', 'world', 123, 'orange'];
-//
+return myArr.reverse();
+
+}
+
+
+let arrayTest1 = ['apple', 'potato', 'Capitalized Words'];
+let arrayTest2 = [123, 8897, 42, 1168, 8675309];
+let arrayTest3 = ['hello', 'world', 123, 'orange']; 
+
+console.log(revMyArr(arrayTest1));
+console.log(revMyArr(arrayTest2));
+console.log(revMyArr(arrayTest3));
